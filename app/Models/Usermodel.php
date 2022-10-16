@@ -12,6 +12,6 @@ class Usermodel extends Model{
 	
 	public function alldata()
 	{
-		return $this->db->table('user')->get()->getResultArray();
+		return $this->db->query("select * from public.user")->getResultArray();
 	}
 }
